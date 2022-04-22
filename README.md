@@ -8,13 +8,13 @@ Here there are some information to start getting familiar with the *computer vis
 
 For a more exhaustive list of related papers, see [papers](https://github.com/RePAIRProject/starter-pack/blob/main/papers.md).
 
-## Libraries
+# Libraries
 Since we are dealing with unstructured 3D data, we are oriented towards treating
 them as pointclouds or graphs.
 
 We recommend to get familiar with the following libraries
 
-#### pytorch geometric ([Docs](https://pytorch-geometric.readthedocs.io/en/latest/) - [Code](https://github.com/pyg-team/pytorch_geometric))
+## pytorch geometric ([Docs](https://pytorch-geometric.readthedocs.io/en/latest/) - [Code](https://github.com/pyg-team/pytorch_geometric))
 The library for working with graphs and for machine learning approaches as Graph Neural Networks (GNN).
 
 Pytorch geometric is built on [pytorch](https://pytorch.org/), so [familiarity with pytorch](https://pytorch.org/tutorials/) is for sure useful.
@@ -22,28 +22,28 @@ Pytorch geometric is built on [pytorch](https://pytorch.org/), so [familiarity w
 A good place to start could be:
 - [Colab Notebook and Video Tutorials](https://pytorch-geometric.readthedocs.io/en/latest/notes/colabs.html), for example Node or Graph Classification with Graph Neural Networks (tutorials 2 and 3).
 
-#### open3d ([Docs](http://www.open3d.org/docs/release/) - [Code](https://github.com/isl-org/Open3D))
+## open3d ([Docs](http://www.open3d.org/docs/release/) - [Code](https://github.com/isl-org/Open3D))
 The library for working with point clouds.
 
 A good place to start could be:
 - [the geometry tutorials](http://www.open3d.org/docs/release/tutorial/geometry/index.html) as a start
 - [the pipelines tutorials](http://www.open3d.org/docs/release/tutorial/geometry/index.html), mostly the one on registration.
 
-##### Others
+## Others
 Useful other libraries:
 - [numpy](https://numpy.org/learn/) / [scipy](https://scipy.org/) for working with arrays
 - [vedo](https://vedo.embl.es/) for 3d meshes
 - [opencv](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html) for image processing
 
 
-## Pipeline
+# Pipeline
 The general pipeline of the project could be divided into three main blocks:
 
 - [acquisition and reconstruction](#acquisition-and-Reconstruction)
 - [processing](#processing)
 - [puzzle-solving](#puzzle-solving)
 
-### Acquisition and Reconstruction
+## Acquisition and Reconstruction
 The first part consists in acquiring the fragments using a camera or a [structured light](https://en.wikipedia.org/wiki/Structured_light)-based 3D scanner.
 The objective would be to reach scanner accuracy while using only a camera and taking multiple pictures from different perspectives.
 
@@ -59,7 +59,7 @@ Some approaches assume the camera position is known (and sometimes a segmentatio
 - [NeRD: Neural Reflectance Decomposition from Image Collections](https://markboss.me/publication/2021-nerd/)
 - [Extracting Triangular 3D Models, Materials, and Lighting From Images](https://nvlabs.github.io/nvdiffrec/)
 
-### Processing
+## Processing
 The processing part focus on extracting information from the reconstructed 3d models.
 
 This may include, but is not limited to:
@@ -68,12 +68,12 @@ This may include, but is not limited to:
 - features extraction, similar to the salient curves in [Exploiting Unbroken Surface Congruity for the Acceleration of Fragment Reassembly (EUROGRAPHICS 2017)](https://diglib.eg.org/bitstream/handle/10.2312/gch20171305/137-144.pdf)
 - clustering fragments based on similarity
 
-### Puzzle-solving
+## Puzzle-solving
 Puzzle-solving refers to the problem of aligning/assembling the fragments to reconstruct the original fresco.
 
 Here again we may think of two-subproblem: the pair-wise alignment of two fragments, and the large scale reconstruction given single alignments.
 
-#### Pairwise Alignment
+### Pairwise Alignment
 The problem of point cloud registration is well-known, but most approaches tend to merge the two point clouds instead of aligning/assembling them.
 
 This has been observed when using *standard* methods, such as:
@@ -86,5 +86,5 @@ Other possible approaches may include or extend:
 - [RPM-Net: Robust Point Matching using Learned Features (CVPR, 2020)](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf) which seems to be more robust to the initial estimation;
 - [PointNetLK: Robust & Efficient Point Cloud Registration using PointNet (CVPR, 2019)](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) which fuses the [PointNet](https://arxiv.org/abs/1706.02413) idea and the [Lukas Kanade method](https://en.wikipedia.org/wiki/Lucas%E2%80%93Kanade_method) for point cloud registration.
 
-#### Hierarchical puzzle-solving
+### Hierarchical puzzle-solving
 This part is still in development
