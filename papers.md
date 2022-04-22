@@ -1,0 +1,46 @@
+# Papers
+
+## Papers Collections:
+
+- [CNR ExploRA - CNR papers on the topic](https://publications.cnr.it/search/f/cHJvZ2V0dGlldXJvcGVpX2Fjcm9ueW1fcy1pLXMtbToiR1JBVklUQVRFIg)
+- [Publications in the presious project](http://www.presious.eu/publications)
+
+## Papers Table
+| Year | Paper                 | Authors | Theme | Where | Code | Links |
+|------|-----------------------|:-------:|:-----:|:----:|:---:|:---:|
+| 2006 | Reassembling Fractured Objects by Geometric Matching | *Huang et al.* | `reassembling` | ACM Transactions on Graphics | :x: | [PDF](https://www.cct.lsu.edu/~kzhang/papers/huang2006sig.pdf) |
+| 2008 | A System for High-Volume Acquisition and Matching of Fresco Fragments: Reassembling Theran Wall Paintings | *Brown et al.* | `reassembling` | SIGGRAPH | :x: | [page](https://gfx.cs.princeton.edu/pubs/Brown_2008_ASF/index.php) - [PDF](https://gfx.cs.princeton.edu/pubs/Brown_2008_ASF/fresco08_paper.pdf)
+| 2008 | Learning How to Match Fresco Fragments | *Funkhouser et al.* | `reassembling` | EUROGRAPHICS 2011 | :x: | [PDF](https://gfx.cs.princeton.edu/pubs/Funkhouser_2011_LHT/eg11.pdf) |
+| 2009 | Fast Point Feature Histograms (FPFH) for 3D Registration | *Rusu et al.* | `descriptors` | ICRA | [implemented in open3d](http://www.open3d.org/docs/latest/python_api/open3d.registration.compute_fpfh_feature.html) | [PDF](https://www.cvl.iis.u-tokyo.ac.jp/class2016/2016w/papers/6.3DdataProcessing/Rusu_FPFH_ICRA2009.pdf) |
+| 2010 | Multi-Feature Matching of Fresco Fragments | *Toler-Franklin et al.* | `reassembling` | ACM Transaction on Graphics | :x: | [PDF](https://gfx.cs.princeton.edu/pubs/Toler-Franklin_2010_MMO/multifeaturematch_final.pdf)
+| 2014 | 3D reconstruction methods for digital preservation of cultural heritage: A survey | *Gomes et al.* | `reconstruction` | Pattern Recognition Letters | :x: | [page](https://www.sciencedirect.com/science/article/abs/pii/S0167865514001032)
+| 2015 | Probability iterative closest point algorithm for _m_-D point set registration with noise | *Du et al.* | `matching` | Neurocomputing | :x: | [PDF](https://daneshyari.com/article/preview/409393.pdf) |
+| 2015 | 3D Fragment Reassembly Using Integrated Template Guidance and Fracture-Region Matching | *Zhang et al.* | `reassembling` | ICCV | :x: | [page](https://www.semanticscholar.org/paper/3D-Fragment-Reassembly-Using-Integrated-Template-Zhang-Yu/1a506a7624621c6ad2f6cd75a02f79256eda2e4c) - [video](https://www.cct.lsu.edu/~kzhang/3DReassembly) - no pdf |
+| 2015 | Constrained Planar Cuts - Object Partitioning for Point Cloud | *Schoeler et al.* | `segmentation` | CVPR | [code in the PCL library](https://pointclouds.org/documentation/classpcl_1_1_c_p_c_segmentation.html) | [PDF](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schoeler_Constrained_Planar_Cuts_2015_CVPR_paper.pdf) |
+| 2016 | Effective 3D Geometric Matching for DataRestoration and Its Forensic Application | *Zhang* | `reassembling` | Phd Thesis | :x: | [PDF](https://core.ac.uk/download/pdf/217401414.pdf) |
+| 2016 | 3DMatch: Learning Local Geometric Descriptors from RGB-D Reconstructions | *Zeng et al.* | `matching` | CVPR | [page](https://3dmatch.cs.princeton.edu/) - [github](https://github.com/andyzeng/3dmatch-toolbox) | [PDF](https://arxiv.org/pdf/1603.08182.pdf) |
+| 2017 | Contour detection in unstructured 3D point clouds | *Hackel et al.* | `contour detection`, `segmentation` | CVPR | :x: | [PDF](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Hackel_Contour_Detection_in_CVPR_2016_paper.pdf) |
+| 2017 | PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space | *Qi et al.* | `feature extraction` | CVPR | [github](https://github.com/charlesq34/pointnet2) | [arXiv](https://arxiv.org/abs/1706.02413) |
+| 2017 | Geometry Based Faceting of 3D Digitized Archaeological Fragments| *H. ElNaghy and L. Dorst* | `faceting` | ICCV | :x: | [Page](https://openaccess.thecvf.com/content_ICCV_2017_workshops/w42/html/ElNaghy_Geometry_Based_Faceting_ICCV_2017_paper.html) |
+| 2018 | Using Mathematical Morphology to Simplify Archaeological Fracture Surfaces | *H. ElNaghy and L. Dorst* | `faceting` | EU-SGP (Poster) | :x: | [PDF](https://diglib.eg.org/bitstream/handle/10.2312/sgp20181179/003-004.pdf) |
+| 2018 | Reassembly of fractured objects using surface signature | *Son et al.* | `reassembling` | The Visual Computer | :x: | :x: |
+| 2018 | Out-of-core Resampling of Gigantic Point Clouds | *Bletterer et al.* | `resampling` | EU-SGP (Poster) | :x: | [PDF](https://diglib.eg.org/bitstream/handle/10.2312/sgp20181178/001-002.pdf?sequence=1&isAllowed=y) |
+| 2019 | Dynamic Graph CNN for Learning on Point Clouds | *Want et al.* | `features`, `segmentation` | TOG | [github](https://github.com/WangYueFt/dgcnn) | [arXiv](https://arxiv.org/abs/1801.07829) |
+| 2019 | JigsawNet: Shredded Image Reassembly using Convolutional Neural Network and Loop-based Composition | *Le and Li* | `2D reassembling` | CVPR | [github](https://github.com/Lecanyu/JigsawNet) | [arXiv](https://arxiv.org/abs/1809.04137v1) |
+| 2019 | Puzzling Engine: A Digital Platform to aid the Reassemgling of Fractured Framgents | *Hernandez et al.* | `reassembling` | 27th CIPA International Symposium | :x: | [page](https://www.semanticscholar.org/paper/PUZZLING-ENGINE%3A-A-DIGITAL-PLATFORM-TO-AID-THE-OF-Hernandez-Vincke/56599ebd9af1dd999c7defcefbb6bd95f50dc024) - [PDF](https://pdfs.semanticscholar.org/a81e/e959d0642225da9dbecbd77d1f81842fc6ad.pdf) |
+| 2019 | Reassembly of fractured object using fragment topology, | *Alzaid et al.* | `reassembling` | ICPRS | :x: | :x: |
+| 2019 | From the fragment to the big picture | *Bruderer et al.* | `reassembling` | CHNT | :x: | [PDF](https://www.chnt.at/wp-content/uploads/From-the-fragment-to-the-big-picture.pdf) |
+| 2019 | Deep Closest Point: Learning Representations for Point Cloud Registration | *Wang et al.* | `registration` | ICCV | :x: | [PDF](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf) |
+| 2019 | PRNet: Self-Supervised Learning for Partial-to-Partial Registration | *Wang & Solomon* | `registration` | NeurIPS | [github](https://github.com/WangYueFt/prnet) | [PDF](https://proceedings.neurips.cc/paper/2019/file/ebad33b3c9fa1d10327bb55f9e79e2f3-Paper.pdf) |
+| 2020 | RPM-Net: Robust Point Matching using Learned Features (CVPR, 2020) | *Jian Yew & Hee Lee* | `registration` | CVPR | [github](https://github.com/yewzijian/RPMNet) | [PDF](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf)
+| 2020 | PointNetLK: Robust & Efficient Point Cloud Registration using PointNet | *Aoki, Goforth et al.* | `registration` | CVPR | [github](https:
+//github.com/hmgoforth/PointNetLK) | [PDF](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) |
+| 2020 | Fracturing Artefacts into 3D Printable Puzzles to Enhance Audience Engagement with Heritage Collections | *Rodriguez K. et al.* | `3D fracturing` | JCCH | :x: | [page](https://dl.acm.org/doi/fullHtml/10.1145/3351343) - no pdf |
+| 2020 | Pairwise Matching for 3D Fragment Reassembly Based on Boundary Curves and Concave-Convex Patches | *Li et al.* | `matching` | IEEE Access | :x: | [PDF](https://ieeexplore.ieee.org/ielx7/6287639/8948470/08938803.pdf)
+| 2020 | A Hybrid Approach to Reassemble Ancient Decorated Block Fragments through a 3D Puzzling Engine | *Hernandez et al.* | `reassembling` | Remote Sensing | :x: | [page](https://www.mdpi.com/2072-4292/12/16/2526/htm) - [PDF](https://www.mdpi.com/2072-4292/12/16/2526/pdf)
+| 2020 | Developing a Reassembling Algorithm for Broken Objects | *Jia et al.* | `reassembling` | IEEE Access | :x: | [PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9279208) |
+| 2020 | TEASER: Fast and Certifiable Point Cloud Registration | *Yang et al.* | `registration` | Trans. Robotics | [github](https://github.com/MIT-SPARK/TEASER-plusplus) | [PDF](https://arxiv.org/pdf/2001.07715.pdf) |
+| 2021 | A Fragment Fracture Surface Segmentation Method Based on Learning of Local Geometric Features on Margins Used for Automatic Utensil Reassembly | *Liu B. et al.* | `segmentation` | Computer-Aided Design | :x: | [page](https://www.sciencedirect.com/science/article/abs/pii/S0010448520301561?dgcid=rss_sd_all)
+| 2021 | A System for 3D Reconstruction Of Comminuted Tibial Plafond Bone Fractures | *Liu P. et al.* | `reconstruction` | Arxiv / CompMediMag | :x: | [PDF](https://arxiv.org/pdf/2102.11684.pdf)
+| 2021 | Structure-From-Sherds: Incremental 3D Reassembly of Axially Symmetric Pots From Unordered and Mixed Fragment Collections | *Hong et al.* | `reassembling` | ICCV | [github](https://github.com/SeongJong-Yoo/structure-from-sherds) | [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Hong_Structure-From-Sherds_Incremental_3D_Reassembly_of_Axially_Symmetric_Pots_From_Unordered_ICCV_2021_paper.pdf) |
+| 2021 | Learning Geometry-Disentangled Representation for Complementary Understanding of 3D Object Point Cloud | *Xu et al.* | `segmentation` | AAAI | [github](https://github.com/mutianxu/GDANet) | [arXiv](https://arxiv.org/abs/2012.10921) |
