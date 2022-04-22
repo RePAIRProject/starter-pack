@@ -6,7 +6,7 @@ It will consists of many modules, ranging from the acquisition, to the processin
 
 Here there are some information to start getting familiar with the *computer vision* part of the project.
 
-For a more exhaustive list of related papers, see [papers](https://github.com/RePAIRProject/starter_pack/blob/main/papers.md).
+For a more exhaustive list of related papers, see [papers](https://github.com/RePAIRProject/starter-pack/blob/main/papers.md).
 
 ## Libraries
 Since we are dealing with unstructured 3D data, we are oriented towards treating
