@@ -86,5 +86,5 @@ Other possible approaches may include or extend:
 - [RPM-Net: Robust Point Matching using Learned Features (CVPR, 2020)](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf) which seems to be more robust to the initial estimation;
 - [PointNetLK: Robust & Efficient Point Cloud Registration using PointNet (CVPR, 2019)](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) which fuses the [PointNet](https://arxiv.org/abs/1706.02413) idea and the [Lukas Kanade method](https://en.wikipedia.org/wiki/Lucas%E2%80%93Kanade_method) for point cloud registration.
 
-### Hierarchical puzzle-solving
-This part is still in development
+### Puzzle-solving
+After solving alignments in a pairwise manner, the final global solution has to be found. This part is still in development.
