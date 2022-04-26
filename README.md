@@ -63,7 +63,7 @@ Some approaches assume the camera position is known (and sometimes a segmentatio
 The processing part focus on extracting information from the reconstructed 3d models.
 
 This may include, but is not limited to:
-- filtered point cloud data after outlier removal and segmentation (which in literature is denoted as *part segmentation* to distinguish from *semantic segmentation*): here you can find an [overview with libraries and papers](https://paperswithcode.com/task/3d-part-segmentation).
+- outlier removal and segmentation (which in literature is denoted as *part segmentation* to distinguish from *semantic segmentation*): here you can find an [overview with libraries and papers](https://paperswithcode.com/task/3d-part-segmentation).
 - surface extraction to detect the top surface related to the fresco (an example could be the [plane segmentation from open3d](http://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html?highlight=segment%20plane#Plane-segmentation))
 - features extraction, similar to the salient curves in [Exploiting Unbroken Surface Congruity for the Acceleration of Fragment Reassembly (EUROGRAPHICS 2017)](https://diglib.eg.org/bitstream/handle/10.2312/gch20171305/137-144.pdf)
 - clustering fragments based on similarity
