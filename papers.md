@@ -10,7 +10,7 @@
 ## Papers Table
 | Year | Paper                 | Authors | Theme | Where | Code | Links |
 |------|-----------------------|:-------:|:-----:|:----:|:---:|:---:|
-| 2006 | Reassembling Fractured Objects by Geometric Matching | *Huang et al.* | `reassembling` | ACM Transactions on Graphics | :x: | [PDF](https://www.cct.lsu.edu/~kzhang/papers/huang2006sig.pdf) |
+| 2006 | Reassembling Fractured Objects by Geometric Matching | *Huang et al.* | `reassembling`, `segmentation` | ACM Transactions on Graphics | :x: | [PDF](https://www.cct.lsu.edu/~kzhang/papers/huang2006sig.pdf) |
 | 2008 | A System for High-Volume Acquisition and Matching of Fresco Fragments: Reassembling Theran Wall Paintings | *Brown et al.* | `reassembling` | SIGGRAPH | :x: | [page](https://gfx.cs.princeton.edu/pubs/Brown_2008_ASF/index.php) - [PDF](https://gfx.cs.princeton.edu/pubs/Brown_2008_ASF/fresco08_paper.pdf)
 | 2008 | Learning How to Match Fresco Fragments | *Funkhouser et al.* | `reassembling` | EUROGRAPHICS 2011 | :x: | [PDF](https://gfx.cs.princeton.edu/pubs/Funkhouser_2011_LHT/eg11.pdf) |
 | 2009 | Fast Point Feature Histograms (FPFH) for 3D Registration | *Rusu et al.* | `descriptors` | ICRA | [implemented in open3d](http://www.open3d.org/docs/latest/python_api/open3d.registration.compute_fpfh_feature.html) | [PDF](https://www.cvl.iis.u-tokyo.ac.jp/class2016/2016w/papers/6.3DdataProcessing/Rusu_FPFH_ICRA2009.pdf) |
@@ -27,7 +27,7 @@
 | 2018 | Using Mathematical Morphology to Simplify Archaeological Fracture Surfaces | *H. ElNaghy and L. Dorst* | `faceting` | EU-SGP (Poster) | :x: | [PDF](https://diglib.eg.org/bitstream/handle/10.2312/sgp20181179/003-004.pdf) |
 | 2018 | Reassembly of fractured objects using surface signature | *Son et al.* | `reassembling` | The Visual Computer | :x: | :x: |
 | 2018 | Out-of-core Resampling of Gigantic Point Clouds | *Bletterer et al.* | `resampling` | EU-SGP (Poster) | :x: | [PDF](https://diglib.eg.org/bitstream/handle/10.2312/sgp20181178/001-002.pdf?sequence=1&isAllowed=y) |
-| 2018 | A multi feature fusion method for reassembly of 3D cultural heritage artifacts | *Zhang et al.* | `reassembling` | :x: | [elsevier](https://www.sciencedirect.com/science/article/pii/S1296207417306775) |
+| 2018 | A multi feature fusion method for reassembly of 3D cultural heritage artifacts | *Zhang et al.* | `reassembling` | JCCH | :x: | [elsevier](https://www.sciencedirect.com/science/article/pii/S1296207417306775) |
 | 2019 | Dynamic Graph CNN for Learning on Point Clouds | *Want et al.* | `features`, `segmentation` | TOG | [github](https://github.com/WangYueFt/dgcnn) | [arXiv](https://arxiv.org/abs/1801.07829) |
 | 2019 | JigsawNet: Shredded Image Reassembly using Convolutional Neural Network and Loop-based Composition | *Le and Li* | `2D reassembling` | CVPR | [github](https://github.com/Lecanyu/JigsawNet) | [arXiv](https://arxiv.org/abs/1809.04137v1) |
 | 2019 | Puzzling Engine: A Digital Platform to aid the Reassemgling of Fractured Framgents | *Hernandez et al.* | `reassembling` | 27th CIPA International Symposium | :x: | [page](https://www.semanticscholar.org/paper/PUZZLING-ENGINE%3A-A-DIGITAL-PLATFORM-TO-AID-THE-OF-Hernandez-Vincke/56599ebd9af1dd999c7defcefbb6bd95f50dc024) - [PDF](https://pdfs.semanticscholar.org/a81e/e959d0642225da9dbecbd77d1f81842fc6ad.pdf) |
