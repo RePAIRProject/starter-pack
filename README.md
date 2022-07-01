@@ -59,19 +59,42 @@ Some approaches assume the camera position is known (and sometimes a segmentatio
 - [NeRD: Neural Reflectance Decomposition from Image Collections](https://markboss.me/publication/2021-nerd/)
 - [Extracting Triangular 3D Models, Materials, and Lighting From Images](https://nvlabs.github.io/nvdiffrec/)
 
-## Processing
+## 3D Fragment Processing
 The processing part focus on extracting information from the reconstructed 3d models.
 
 This may include, but is not limited to:
 - outlier removal and segmentation (which in literature is denoted as *part segmentation* to distinguish from *semantic segmentation*): here you can find an [overview with libraries and papers](https://paperswithcode.com/task/3d-part-segmentation).
-- surface extraction to detect the top surface related to the fresco (an example could be the [plane segmentation from open3d](http://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html?highlight=segment%20plane#Plane-segmentation))
-- features extraction, similar to the salient curves in [Exploiting Unbroken Surface Congruity for the Acceleration of Fragment Reassembly (EUROGRAPHICS 2017)](https://diglib.eg.org/bitstream/handle/10.2312/gch20171305/137-144.pdf)
+
+### Part Segmentation
+This part aims at distinguishing the different parts of the fragments.
+There are three main components, the *top surface* (which is relatively flat and contains texture and pictorial information), the *broken sides* (which are rough and contains geometrical information) and the *bottom part* (which varies a lot and may contain information about materials and original position).
+
+Since there is no ground truth available, a semi-supervised or unsupervised approach should be applied in order to be able to segment and divide those parts from different fragments.
+As a baseline a geometric approach can be used, and a good starting point for this is the [plane segmentation from open3d](http://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html?highlight=segment%20plane#Plane-segmentation) which is able to find the *top surface* on many flat fragments.
+
+### Feature Extraction
+After or parallel to the part segmentation, another challenge is the extraction of features from the fragments, such as:
+- salient curves as in [Exploiting Unbroken Surface Congruity for the Acceleration of Fragment Reassembly (EUROGRAPHICS 2017)](https://diglib.eg.org/bitstream/handle/10.2312/gch20171305/137-144.pdf)
+- brush strokes
+- particular textures which refers to specific pictorial styles
+- the 2D texture of the top surface of the fragment
+
+To help with this task, the input information (the 3D geometric mesh of the fragment) can be complemented with some insights from the archaeologists like:
+- style of the frescoes
+- pigment characterization
+
+And the output feature extraction will be used for:
 - clustering fragments based on similarity
+- as a contribute to the matching computation
 
 ## Puzzle-solving
 Puzzle-solving refers to the problem of aligning/assembling the fragments to reconstruct the original fresco.
 
 Here again we may think of two-subproblem: the pair-wise alignment of two fragments, and the large scale reconstruction given single alignments.
+
+### 2D Puzzle Solving
+An interesting approach would be, after extracting the 2D texture information from the top surface, using the 2D images as an initial solution for the final 3D alignment.
+Solving the puzzle in 2D has more literature and may be seen as a slightly less challenging task to support the final 6DoF solution. 
 
 ### Pairwise Alignment
 The problem of point cloud registration is well-known, but most approaches tend to merge the two point clouds instead of aligning/assembling them.
@@ -86,5 +109,5 @@ Other possible approaches may include or extend:
 - [RPM-Net: Robust Point Matching using Learned Features (CVPR, 2020)](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf) which seems to be more robust to the initial estimation;
 - [PointNetLK: Robust & Efficient Point Cloud Registration using PointNet (CVPR, 2019)](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) which fuses the [PointNet](https://arxiv.org/abs/1706.02413) idea and the [Lukas Kanade method](https://en.wikipedia.org/wiki/Lucas%E2%80%93Kanade_method) for point cloud registration.
 
-### Puzzle-solving
+### Global Puzzle-solving
 After solving alignments in a pairwise manner, the final global solution has to be found. This part is still in development.
