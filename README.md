@@ -29,12 +29,14 @@ A good place to start could be:
 - [the geometry tutorials](http://www.open3d.org/docs/release/tutorial/geometry/index.html) as a start
 - [the pipelines tutorials](http://www.open3d.org/docs/release/tutorial/geometry/index.html), mostly the one on registration.
 
+Open3d is a very good choice when dealing with geometry operations (both for pointcloud and meshes), yet it does not handle very well texture images applied to triangle meshes when applying filters on them. For these operations, [pymeshlab](https://pymeshlab.readthedocs.io/en/latest/) is recommended.
+
 ## Others
 Useful other libraries:
 - [numpy](https://numpy.org/learn/) / [scipy](https://scipy.org/) for working with arrays
 - [vedo](https://vedo.embl.es/) for 3d meshes
 - [opencv](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html) for image processing
-
+- [pymeshlab](https://pymeshlab.readthedocs.io/en/latest/) for processing of meshes and 3D point clouds (works very well with texture images)
 
 # Pipeline
 The general pipeline of the project could be divided into three main blocks:
@@ -69,19 +71,20 @@ This may include, but is not limited to:
 This part aims at distinguishing the different parts of the fragments.
 There are three main components, the *top surface* (which is relatively flat and contains texture and pictorial information), the *broken sides* (which are rough and contains geometrical information) and the *bottom part* (which varies a lot and may contain information about materials and original position).
 
+
+
 Since there is no ground truth available, a semi-supervised or unsupervised approach should be applied in order to be able to segment and divide those parts from different fragments.
 As a baseline a geometric approach can be used, and a good starting point for this is the [plane segmentation from open3d](http://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html?highlight=segment%20plane#Plane-segmentation) which is able to find the *top surface* on many flat fragments.
 
 ### Feature Extraction
 After or parallel to the part segmentation, another challenge is the extraction of features from the fragments, such as:
 - salient curves as in [Exploiting Unbroken Surface Congruity for the Acceleration of Fragment Reassembly (EUROGRAPHICS 2017)](https://diglib.eg.org/bitstream/handle/10.2312/gch20171305/137-144.pdf)
-- brush strokes
-- particular textures which refers to specific pictorial styles
-- the 2D texture of the top surface of the fragment
+- particular textures which refers to specific pictorial styles, brush strokes
+- the 2D texture of the top surface of the fragment (creating a 2D fragment)
 
 To help with this task, the input information (the 3D geometric mesh of the fragment) can be complemented with some insights from the archaeologists like:
-- style of the frescoes
-- pigment characterization
+- [style of the frescoes](https://depts.washington.edu/hrome/Authors/ninamil7/TheFourStylesofRomanWallPaintings/pub_zbarticle_view_printable.html)
+- pigment characterization (knowing which colors have been used, we can use these to extract features)
 
 And the output feature extraction will be used for:
 - clustering fragments based on similarity
@@ -94,9 +97,22 @@ Here again we may think of two-subproblem: the pair-wise alignment of two fragme
 
 ### 2D Puzzle Solving
 An interesting approach would be, after extracting the 2D texture information from the top surface, using the 2D images as an initial solution for the final 3D alignment.
-Solving the puzzle in 2D has more literature and may be seen as a slightly less challenging task to support the final 6DoF solution. 
+Solving the puzzle in 2D has more literature and may be seen as a slightly less challenging task to support the final 6DoF solution.
 
-### Pairwise Alignment
+#### Data generation
+For the 2D puzzle solving variant, some datasets are available:
+- DAFNE: [Challenge Page](https://vision.unipv.it/DAFchallenge/DAFNE_dataset/) - Paper: Piercarlo Dondi, Luca Lombardi, Alessandra Setti (2020), *[DAFNE: a dataset of fresco fragments for digital anastlylosis](https://www.sciencedirect.com/science/article/pii/S0167865520303408)*, Pattern Recognition Letters, 138 (2020), pp. 631-637, Elsevier, DOI:10.1016/j.patrec.2020.09.015.
+- Derech, Niv, Ayellet Tal, and Ilan Shimshoni. "*Solving archaeological puzzles*" Pattern Recognition 119 (2021): 108065. (Website has problem with expired certificate, reach out to get the data)
+- A puzzle generator: [Github Repo for the generator](https://github.com/xmlyqing00/PuzzleSolving-tool) - [Webpage](https://xmlyqing00.github.io/PuzzleSolving-tool/)
+
+#### Curve-based
+Alignment can be estimated based on the geometry of the contours with partial shape matching.
+
+#### Texture-based
+Another alternative is to compute a score based on the texture similarity and compatibility across two fragments.
+
+
+### 3D Pairwise Alignment
 The problem of point cloud registration is well-known, but most approaches tend to merge the two point clouds instead of aligning/assembling them.
 
 This has been observed when using *standard* methods, such as:
