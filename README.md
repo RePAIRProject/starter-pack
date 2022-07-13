@@ -4,7 +4,7 @@ The RePAIR Project aims at developing a complete workflow to reassemble shattere
 
 It will consists of many modules, ranging from the acquisition, to the processing, the puzzle-solving until the physical reconstruction using a robotic arm.
 
-Here there are some information to start getting familiar with the *computer vision* part of the project.
+Here there are some information to start getting familiar with the *computer vision* part of the project: digitizing the fragments, reconstructing an accurate 3D model, processing it and solving the puzzle by finding the correct pairwise and group matches.
 
 For a more exhaustive list of related papers, see [papers](https://github.com/RePAIRProject/starter-pack/blob/main/papers.md).
 
@@ -45,13 +45,14 @@ The general pipeline of the project could be divided into three main blocks:
 - [processing](#processing)
 - [puzzle-solving](#puzzle-solving)
 
-## Acquisition and Reconstruction
+# Acquisition and Reconstruction
 The first part consists in acquiring the fragments using a camera or a [structured light](https://en.wikipedia.org/wiki/Structured_light)-based 3D scanner.
 The objective would be to reach scanner accuracy while using only a camera and taking multiple pictures from different perspectives.
 
 For the scanner-based acquisition, we already obtain a 3D model.
 
 For the camera-based acquisition, we need to estimate camera position and reconstruct the 3D model.
+
 For these two tasks one can look at:
 - [Meshroom](https://alicevision.org/#meshroom) is an open source node-based framework from [Alicevision](https://alicevision.org/);
 - [Metashape](https://www.agisoft.com/) which is a closed software from Agisoft;
@@ -61,7 +62,7 @@ Some approaches assume the camera position is known (and sometimes a segmentatio
 - [NeRD: Neural Reflectance Decomposition from Image Collections](https://markboss.me/publication/2021-nerd/)
 - [Extracting Triangular 3D Models, Materials, and Lighting From Images](https://nvlabs.github.io/nvdiffrec/)
 
-## 3D Fragment Processing
+# 3D Fragment Processing
 The processing part focus on extracting information from the reconstructed 3d models.
 
 This may include, but is not limited to:
@@ -90,7 +91,7 @@ And the output feature extraction will be used for:
 - clustering fragments based on similarity
 - as a contribute to the matching computation
 
-## Puzzle-solving
+# Puzzle-solving
 Puzzle-solving refers to the problem of aligning/assembling the fragments to reconstruct the original fresco.
 
 Here again we may think of two-subproblem: the pair-wise alignment of two fragments, and the large scale reconstruction given single alignments.
