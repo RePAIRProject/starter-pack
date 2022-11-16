@@ -105,7 +105,7 @@ For the 2D puzzle solving variant, some datasets are available:
 - DAFNE: [Challenge Page](https://vision.unipv.it/DAFchallenge/DAFNE_dataset/) - Paper: Piercarlo Dondi, Luca Lombardi, Alessandra Setti (2020), *[DAFNE: a dataset of fresco fragments for digital anastlylosis](https://www.sciencedirect.com/science/article/pii/S0167865520303408)*, Pattern Recognition Letters, 138 (2020), pp. 631-637, Elsevier, DOI:10.1016/j.patrec.2020.09.015.
 - Derech, Niv, Ayellet Tal, and Ilan Shimshoni. "*Solving archaeological puzzles*" Pattern Recognition 119 (2021): 108065. (Website has problem with expired certificate, reach out to get the data)
 - A puzzle generator: [Github Repo for the generator](https://github.com/xmlyqing00/PuzzleSolving-tool) - [Webpage](https://xmlyqing00.github.io/PuzzleSolving-tool/)
-
+- Digitally Generated Fragments: [Webpage](https://www.ece.lsu.edu/xinli/FragmentImageRepository/index.html) 
 #### Curve-based
 Alignment can be estimated based on the geometry of the contours with partial shape matching.
 
