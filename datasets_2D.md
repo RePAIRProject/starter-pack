@@ -1,11 +1,3 @@
-# 2D puzzle solving using curve and texture matching
-
-This is a general repository for information about the 2D puzzle solving task, which includes
-
-- Contour-based matching
-- Texture-based matching
-- Global matching
-
 # 2D Datasets
 
 | Dataset | Type | Fragments cut | Fragment quantity | Erosion | Missing fragments |
@@ -15,7 +7,7 @@ This is a general repository for information about the 2D puzzle solving task, w
 | DAFNE [3, 3b] | Synthetically created from 2D image | Voronoi on random or clustered input points (synthetic and unrealistic) | Variable (~50) | Yes (synthetic) | Yes (random) |
 | Technion [4] | Synthetically created from 2D image | Based on dry mud (synthetic, but realistic) | Variable (~25) | Yes (mud-based) | No |
 | RePAIR 2D | Rendered from 3D model | Actually broken frescoes (real) | Variable (3 - 20) | Yes (real) | Sometimes |
-| RePAIR 2D [5]| RGB images captured by a smartphone| Actually broken frescoes (real) | Variable (6 - 9 pieces in 3 groups) | Yes (real) | No |
+| RePAIR 2D | RGB images captured by a smartphone| Actually broken frescoes (real) | Variable (6 - 9 pieces in 3 groups) | Yes (real) | No |
 
 ### Notes
 **WIP*** = the code has been forked and extensions are possible. The shape of the fragment can be switched between smooth or hard lines, missing fragments are now supported and erosion will be added as well.
@@ -39,5 +31,5 @@ The RePAIR 2D dataset is in development.
 
 [4] Derech, Niv, Ayellet Tal, and Ilan Shimshoni. "*Solving archaeological puzzles*" Pattern Recognition 119 (2021): 108065. [Software & Data](https://cgm.technion.ac.il/Computer-Graphics-Multimedia/Software/Software.html) [Paper](https://www.sciencedirect.com/science/article/pii/S0031320321002521)
 
-[5] 2D images of 3 groups of RePAIR fragments [Link to download](https://drive.google.com/drive/folders/11vPh2MnRfGK4Xy2kHYS1ZWNWoIlcNSoQ?usp=sharing)
+
 
