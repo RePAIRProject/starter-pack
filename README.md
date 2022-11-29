@@ -106,6 +106,9 @@ For the 2D puzzle solving variant, some datasets are available:
 - Derech, Niv, Ayellet Tal, and Ilan Shimshoni. "*Solving archaeological puzzles*" Pattern Recognition 119 (2021): 108065. (Website has problem with expired certificate, reach out to get the data)
 - A puzzle generator: [Github Repo for the generator](https://github.com/xmlyqing00/PuzzleSolving-tool) - [Webpage](https://xmlyqing00.github.io/PuzzleSolving-tool/)
 - Digitally Generated Fragments: [Webpage](https://www.ece.lsu.edu/xinli/FragmentImageRepository/index.html) 
+
+**For more information about 2D Datasets, please see the [`datasets_2D`](https://github.com/RePAIRProject/starter-pack/blob/main/datasets_2D.md) file.**
+
 #### Curve-based
 Alignment can be estimated based on the geometry of the contours with partial shape matching.
 
