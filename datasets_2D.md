@@ -4,6 +4,7 @@
 |:---|:---|:---|:---|:---|:---|
 | PuzzleSolving-Tool [1, 1b] | Generator from 2D image | Smooth curves | Parameter-based (1-100) | No | No |
 | 2DPuzzleSolving-Tool [2, 1b] | Generator from 2D image | Variable (WIP*) | Parameter-based (1-100) | No (WIP*) | Parameter-based (0-100%)|
+| GRU [5] Crossing cut puzzles| Generator from 2D image | Hard-lines |Parameter-based (from 20 to hundreds of pieces) | Yes | No |
 | DAFNE [3, 3b] | Synthetically created from 2D image | Voronoi on random or clustered input points (synthetic and unrealistic) | Variable (~50) | Yes (synthetic) | Yes (random) |
 | Technion [4] | Synthetically created from 2D image | Based on dry mud (synthetic, but realistic) | Variable (~25) | Yes (mud-based) | No |
 | RePAIR 2D | Rendered from 3D model | Actually broken frescoes (real) | Variable (3 - 20) | Yes (real) | Sometimes |
@@ -30,6 +31,8 @@ The RePAIR 2D dataset is in development.
 [3b] DAFNE: [Challenge Page](https://vision.unipv.it/DAFchallenge/DAFNE_dataset/)
 
 [4] Derech, Niv, Ayellet Tal, and Ilan Shimshoni. "*Solving archaeological puzzles*" Pattern Recognition 119 (2021): 108065. [Software & Data](https://cgm.technion.ac.il/Computer-Graphics-Multimedia/Software/Software.html) [Paper](https://www.sciencedirect.com/science/article/pii/S0031320321002521)
+
+[5] P. Harel and O. Ben-Shahar, Crossing cuts polygonal puzzles: Models and Solvers , In the Proceedings of the IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), June 2021. [Dataset](https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/)
 
 
 
